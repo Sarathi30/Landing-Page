@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>cococola</title>
+</head>
+<body>
+    <section class="sec">
+        
+        <header>
+            <a href="#"><img src="imgs/logo.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Things Go Better With<br><span>Coke</span></h2>
+                <p>Coca-Cola is the largest beverage manufacturer and distributor in the world, one of the largest corporations in the United States, and one of the most successful brands in marketing history.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="imgs/cocacola2.png" class="cocacola">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="imgs/cocacola2.png" onclick="imgSlider('imgs/cocacola2.png');changeBgColor('#c66414')"></li>
+            <li><img src="imgs/cocacola3.png" onclick="imgSlider('imgs/cocacola3.png');changeBgColor('#e60c2c')"></li>
+            <li><img src="imgs/cocacola5.png" onclick="imgSlider('imgs/cocacola5.png');changeBgColor('#1e1e1e')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a target="blank" href="https://facebook.com"><img src="imgs/facebook.png"></a></li>
+            <li><a target="blank" href="https://instagram.com"><img src="imgs/instagram.png"></a></li>
+            <li><a target="blank" href="https://twitter.com"><img src="imgs/twitter.png"></a></li>
+        </ul>
+    </section>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.cocacola').src = anything;
+        }
+        function changeBgColor(color){
+            const sec = document.querySelector('.sec');
+            sec.style.background = color;
+        }
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
